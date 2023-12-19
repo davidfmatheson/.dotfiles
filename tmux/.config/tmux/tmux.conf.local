@@ -414,9 +414,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 # visit https://github.com/tmux-plugins for available plugins
 # set -g @plugin 'tmux-plugins/tmux-copycat'
 # set -g @plugin 'tmux-plugins/tmux-cpu'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @continuum-restore 'on'
+
+# Catppuccin setup
 set -g @plugin 'catppuccin/tmux'
 set -g @plugin 'tmux-plugins/tmux-battery'
 set -g @catppuccin_window_left_separator ""
@@ -436,7 +435,10 @@ set -g @catppuccin_status_fill "icon"
 set -g @catppuccin_status_connect_separator "no"
 set -g @catppuccin_directory_text "#{pane_current_path}"
 set -g @catppuccin_date_time_text "%H:%M"
-
+# Continuum setup
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-restore 'on'
 
 # -- custom variables ----------------------------------------------------------
 
