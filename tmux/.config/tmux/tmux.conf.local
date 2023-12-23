@@ -369,6 +369,8 @@ tmux_conf_copy_to_os_clipboard=false
 # unbind C-b
 # set -g prefix C-a
 # bind C-a send-prefix
+bind -r S-Left swap-window -t -1\; select-window -t -1
+bind -r S-Right swap-window -t +1\; select-window -t +1
 
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
