@@ -8,7 +8,7 @@ return {
       table.insert(
         opts.adapters,
         require("neotest-jest")({
-          jestCommand = "npx jest --",
+          jestCommand = "npx jest",
           jestConfigFile = function()
             local file = vim.fn.expand("%:p")
             if string.find(file, "/apps/") or string.find(file, "/libs/") then
