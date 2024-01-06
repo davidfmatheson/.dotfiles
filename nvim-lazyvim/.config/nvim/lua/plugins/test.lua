@@ -12,7 +12,7 @@ return {
           jestConfigFile = function()
             local file = vim.fn.expand("%:p")
             local repoRoot = vim.fn.getcwd()
-            if string.find(file, repoRoot .. "/apps/") or string.find(file, repoRoot .. "/libs/") then
+            if string.find(file, repoRoot:gsub([[-]], "%%-") .. "/apps/") or string.find(file, repoRoot:gsub([[-]], "%%-") .. "/libs/") then
               return string.match(file, "(.-/[^/]+/)src") .. "jest.config.ts"
             end
 
@@ -22,7 +22,7 @@ return {
           cwd = function()
             local file = vim.fn.expand("%:p")
             local repoRoot = vim.fn.getcwd()
-            if string.find(file, repoRoot .. "/apps/") or string.find(file, repoRoot .. "/libs/") then
+            if string.find(file, repoRoot:gsub([[-]], "%%-") .. "/apps/") or string.find(file, repoRoot:gsub([[-]], "%%-") .. "/libs/") then
               return string.match(file, "(.-/[^/]+/)src")
             end
             return vim.fn.getcwd()
