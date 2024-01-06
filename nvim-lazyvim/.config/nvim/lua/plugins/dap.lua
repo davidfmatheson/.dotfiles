@@ -4,15 +4,15 @@ return {
     opts = function()
       local dap = require("dap")
       local file = vim.fn.expand("%:p")
-      local projectfolder = ""
-      local cwd = vim.fn.getcwd()
+      local projectFolder = ""
+      local cwd = vim.fn.getcwd():gsub([[-]], "%%-")
       if string.find(file, cwd .. "/apps/") or string.find(file, cwd .. "/libs/") then
-        projectfolder = string.match(file, cwd .. "(.-/[^/]+)/src")
+        projectFolder = string.match(file, cwd .. "(.-/[^/]+)/src")
       end
       if not dap.adapters["pwa-chrome"] then
         require("dap").adapters["pwa-chrome"] = {
           type = "executable",
-          command = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+          command = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
         }
       end
       for _, language in ipairs({ "typescript", "javascript", "typescriptreact", "javascriptreact" }) do
@@ -29,14 +29,14 @@ return {
             request = "attach",
             name = "attach by process",
             processid = require("dap.utils").pick_process,
-            cwd = "${workspacefolder}" .. projectfolder,
+            cwd = "${workspacefolder}" .. projectFolder,
           },
           {
             type = "pwa-node",
             request = "attach",
             name = "attach by port",
             port = 9229,
-            cwd = "${workspacefolder}" .. projectfolder,
+            cwd = "${workspacefolder}" .. projectFolder,
           },
           {
             type = "pwa-chrome",
@@ -52,7 +52,13 @@ return {
       end
     end,
     keys = {
-      { "<leader>dd", function() require("osv").launch({port = 8086}) end, desc = "Start lua debug listener" },
-    }
+      {
+        "<leader>dd",
+        function()
+          require("osv").launch({ port = 8086 })
+        end,
+        desc = "Start lua debug listener",
+      },
+    },
   },
 }
