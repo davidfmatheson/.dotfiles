@@ -14,8 +14,17 @@ return {
       end
       if not dap.adapters["pwa-chrome"] then
         dap.adapters["pwa-chrome"] = {
-          type = "executable",
-          command = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          type = "server",
+          host = "localhost",
+          port = "${port}",
+          executable = {
+            command = "node",
+            args = {
+              require("mason-registry").get_package("js-debug-adapter"):get_install_path()
+                .. "/js-debug/src/dapDebugServer.js",
+              "${port}",
+            },
+          },
         }
       end
       if not dap.adapters["sh"] then
@@ -50,12 +59,9 @@ return {
           {
             type = "pwa-chrome",
             request = "launch",
-            name = "Launch & Debug chrome",
+            name = "Launch Chrome",
             url = "http://localhost:4200",
-            webroot = vim.fn.getcwd(),
-            protocol = "inspector",
-            sourcemaps = true,
-            userdatadir = false,
+            webRoot = vim.fn.getcwd(),
           },
         }
       end
