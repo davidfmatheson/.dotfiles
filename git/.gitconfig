@@ -4,3 +4,5 @@
 	email = davidfmatheson@gmail.com
 [pull]
 	rebase = false
+[core]
+	editor = vim
