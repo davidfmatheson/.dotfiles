@@ -71,7 +71,7 @@ export NVM_HOMEBREW=$HOMEBREW_PREFIX/opt/nvm
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git docker nvm aws ng macos nx-completion colored-man-pages fzf zoxide)
+plugins=(brew git docker nvm aws ng macos nx-completion colored-man-pages fzf zoxide sdkman)
 
 DISABLE_MAGIC_FUNCTIONS=true
 
