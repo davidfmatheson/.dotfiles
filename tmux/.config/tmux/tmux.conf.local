@@ -458,13 +458,10 @@ set -g @catppuccin_status_connect_separator "no"
 
 set -g @catppuccin_directory_text "#{pane_current_path}"
 set -g @catppuccin_date_time_text "%H:%M"
-<<<<<<< HEAD
 
 set -g status-right "#{E:@catppuccin_status_directory}#{E:@catppuccin_status_date_time}#{E:@catppuccin_status_battery}"
 set -g status-left "#{E:@catppuccin_status_session}"
 
-=======
->>>>>>> main
 set -g @plugin "tmux-plugins/tmux-battery"
 
 # Continuum setup
