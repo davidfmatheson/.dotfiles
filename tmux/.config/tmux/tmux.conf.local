@@ -395,8 +395,6 @@ bind -n S-M-t run-shell "sesh connect \"$(
 		--bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
 )\""
 
-bind - split-window -v -p 27
-
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
