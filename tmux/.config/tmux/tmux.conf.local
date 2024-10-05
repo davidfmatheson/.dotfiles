@@ -378,6 +378,10 @@ bind -r S-Right swap-window -t +1\; select-window -t +1
 # move status line to top
 set -g status-position top
 
+# turn off visual notification for windows, as it messes with clors
+set -g visual-bell off
+setw -g monitor-activity off
+
 bind -n S-M-t run-shell "sesh connect \"$(
 	sesh list | fzf-tmux -p 55%,60% \
 		--no-sort --ansi --border-label ' sesh ' --prompt '⚡  ' \
