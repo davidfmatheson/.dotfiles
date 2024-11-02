@@ -71,7 +71,7 @@ export NVM_HOMEBREW=$HOMEBREW_PREFIX/opt/nvm
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git docker vi-mode nvm aws ng macos nx-completion colored-man-pages fzf zoxide sdkman)
+plugins=(brew git docker vi-mode nvm aws ng macos nx-completion colored-man-pages fzf zoxide sdkman zsh-autosuggestions zsh-syntax-highlighting)
 
 DISABLE_MAGIC_FUNCTIONS=true
 
@@ -104,8 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # brew zsh stuff
-[[ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-[[ -f $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -f $HOMEBREW_PREFIX/etc/bash_completion.d/az ]] && source $HOMEBREW_PREFIX/etc/bash_completion.d/az
 
 # Homebrew and Python 3 with unversioned symlinks
