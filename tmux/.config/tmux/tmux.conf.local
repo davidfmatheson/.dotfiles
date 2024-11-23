@@ -195,29 +195,21 @@ tmux_conf_uninstall_plugins_on_reload=true
 # set -g @plugin 'tmux-plugins/tmux-cpu'
 
 # Catppuccin setup
-set -g @plugin "catppuccin/tmux#v1.0.3"
+set -g @plugin "catppuccin/tmux#v2.1.0"
 
 set -g @catppuccin_window_status_style "rounded"
 set -g @catppuccin_window_number_position "right"
 
-set -g @catppuccin_window_default_fill "number"
-set -g @catppuccin_window_default_text "#W "
-set -g @catppuccin_window_default_background "#{@thm_blue}"
-set -g @catppuccin_window_default_color "#{@thm_surface_0}"
+set -g @catppuccin_window_text "#W"
+set -g @catppuccin_window_number_color "#{@thm_blue}"
+set -g @catppuccin_window_text_color "#{@thm_surface_0}"
 
-set -g @catppuccin_window_current_fill "number"
-set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),} "
-set -g @catppuccin_window_current_background "#{@thm_peach}"
-set -g @catppuccin_window_current_color "#{@thm_bg}"
+set -g @catppuccin_window_current_text "#W#{?window_zoomed_flag,(),}"
+set -g @catppuccin_window_current_number_color "#{@thm_peach}"
+set -g @catppuccin_window_current_text_color "#{@thm_bg}"
 
-set -g @catppuccin_status_left_separator  " "
-set -g @catppuccin_status_right_separator " "
-set -g @catppuccin_status_fill "icon"
-set -g @catppuccin_status_connect_separator "no"
-set -g @catppuccin_status_background "#{@thm_bg}"
-
-set -g @catppuccin_directory_text "#{pane_current_path}"
-set -g @catppuccin_date_time_text "%H:%M"
+set -g @catppuccin_directory_text " #{pane_current_path}"
+set -g @catppuccin_date_time_text " %H:%M"
 
 set -g status-right "#{E:@catppuccin_status_directory}"
 set -ag status-right "#{E:@catppuccin_status_date_time}"
