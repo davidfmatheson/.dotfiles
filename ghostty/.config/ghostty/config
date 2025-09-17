@@ -1,4 +1,4 @@
-theme              = catppuccin-mocha
+theme              = "Catppuccin Mocha"
 background-opacity = 0.95
 keybind            = super+shift+j=unbind
 keybind            = super+shift+k=unbind
