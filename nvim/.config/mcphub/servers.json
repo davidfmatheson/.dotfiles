@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "nx-mcp": {
+      "args": [
+        "nx-mcp@latest"
+      ],
+      "autoApprove": [],
+      "command": "npx",
+      "disabled_tools": [],
+      "type": "stdio"
+    }
+  },
+  "nativeMCPServers": {
+    "mcphub": {
+      "autoApprove": []
+    }
+  }
+}
