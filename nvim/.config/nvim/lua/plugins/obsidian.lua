@@ -19,5 +19,8 @@ return {
         path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault",
       },
     },
+    checkbox = {
+      order = { " ", "x" },
+    },
   },
 }
