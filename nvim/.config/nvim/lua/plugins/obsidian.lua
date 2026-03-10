@@ -10,6 +10,7 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
+    legacy_commands = false,
     ui = {
       enable = false,
     },
