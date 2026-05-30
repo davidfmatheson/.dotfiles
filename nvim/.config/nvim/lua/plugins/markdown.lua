@@ -18,11 +18,21 @@ return {
       --   dash, bullet, check_icon, check_scope, quote, table_border, callout, link, sign
       ignore = {
         code_background = true,
-        code_border = {"n"},
+        code_border = { "n" },
         sign = true,
       },
       above = 0,
       below = 0,
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters = {
+        ["markdownlint-cli2"] = {
+          prepend_args = { "--config", os.getenv("HOME") .. "/.config/nvim/markdownlint.yaml", "--" },
+        },
+      },
     },
   },
 }
