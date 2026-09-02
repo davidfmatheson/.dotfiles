@@ -128,3 +128,5 @@ export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 
 # Key combinations for common git commands
 bindkey -s '^Xgc' 'git commit -m ""OD'
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
