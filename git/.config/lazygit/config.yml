@@ -1,3 +1,7 @@
+git:
+  diffRenderers:
+    - colorArg: always
+      command: delta --dark --paging=never
 gui:
   theme:
     activeBorderColor:
@@ -25,6 +29,5 @@ gui:
       - '#f38ba8'
     defaultFgColor:
       - '#cdd6f4'
-
   authorColors:
     '*': '#b4befe'
