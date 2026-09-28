@@ -1,6 +1,9 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    lazygit = {
+      configure = false,
+    },
     picker = {
       win = {
         input = {
