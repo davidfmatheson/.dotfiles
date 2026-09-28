@@ -2,6 +2,21 @@ return {
   "folke/snacks.nvim",
   opts = {
     picker = {
+      win = {
+        input = {
+          keys = {
+            -- Disable default bindings so they don't intercept your tmux keys
+            ["<c-j>"] = false,
+            ["<c-k>"] = false,
+          },
+        },
+        list = {
+          keys = {
+            ["<c-j>"] = false,
+            ["<c-k>"] = false,
+          },
+        },
+      },
       sources = {
         explorer = {
           win = {
