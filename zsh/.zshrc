@@ -8,7 +8,7 @@ export ZSH="/Users/davidmatheson/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,16 +112,19 @@ export PATH=$HOMEBREW_PREFIX/opt/python@$PYTHON_VERSION/libexec/bin:$PATH
 export PATH=$PATH:/Users/davidmatheson/Library/Python/$PYTHON_VERSION/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+eval "$(starship init zsh)"
+
+# Yazi if I ever want to use it
+# function yy() {
+# 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+# 	yazi "$@" --cwd-file="$tmp"
+# 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+# 		cd -- "$cwd"
+# 	fi
+# 	rm -f -- "$tmp"
+# }
 
 export EDITOR=nvim
 export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
