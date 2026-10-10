@@ -1,0 +1,26 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Modules named in right_format are left out of $all, so they only show on the right
+format = '$all'
+right_format = '$cmd_duration$time'
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+
+[cmd_duration]
+format = '[$duration]($style) '
+
+[time]
+disabled = false
+format = '[$time]($style)'
+style = 'dimmed white'
+
+[git_status]
+style = 'bold green'
+
+[ruby]
+disabled = true
+
+[aws]
+disabled = true
