@@ -1,0 +1,8 @@
+[settings]
+minimum_release_age = "1d"
+
+[tools]
+java = "25"
+maven = "3.9"
+node = "24"
+uv = "latest"
